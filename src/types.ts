@@ -1,6 +1,6 @@
 export interface Env {
-	// KV Namespace for caching (optional)
-	// CACHE: KVNamespace;
+	// KV Namespace for caching GitHub API responses (optional)
+	GITHUB_CACHE?: KVNamespace;
 	// Service Binding for analytics
 	ANALYTICS: Fetcher;
 }
@@ -20,4 +20,15 @@ export interface GitHubUser {
 export interface CardOptions {
 	theme: "dark" | "light";
 	lang: "en" | "ja";
+	font?: string;
+	/** Optional size overrides (multipliers) */
+	sizeOverrides?: {
+		title?: number;
+		level?: number;
+		username?: number;
+		bio?: number;
+		statLabel?: number;
+		statValue?: number;
+		barLabel?: number;
+	};
 }
