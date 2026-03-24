@@ -10,7 +10,7 @@ importers:
     dependencies:
       hono:
         specifier: ^4.7.4
-        version: 4.12.8
+        version: 4.12.9
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20251225.0
@@ -436,8 +436,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  hono@4.12.8:
-    resolution: {integrity: sha512-VJCEvtrezO1IAR+kqEYnxUOoStaQPGrCmX3j4wDTNOcD1uRPFpGlwQUIW8niPuvHXaTUxeOUl5MMDGrl+tmO9A==}
+  hono@4.12.9:
+    resolution: {integrity: sha512-wy3T8Zm2bsEvxKZM5w21VdHDDcwVS1yUFFY6i8UobSsKfFceT7TOwhbhfKsDyx7tYQlmRM5FLpIuYvNFyjctiA==}
     engines: {node: '>=16.9.0'}
 
   kleur@4.1.5:
@@ -791,7 +791,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  hono@4.12.8: {}
+  hono@4.12.9: {}
 
   kleur@4.1.5: {}
 
