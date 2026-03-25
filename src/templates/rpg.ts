@@ -36,7 +36,7 @@ const LABELS = {
  */
 function calculateLevel(repos: number, followers: number): number {
 	const score = repos * 2 + followers;
-	if (score >= 10000) return 99;
+	if (score >= 10_000) return 99;
 	if (score >= 5000) return 80;
 	if (score >= 2000) return 60;
 	if (score >= 1000) return 50;

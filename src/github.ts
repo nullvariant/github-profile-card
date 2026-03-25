@@ -59,7 +59,7 @@ export async function fetchGitHubUser(username: string): Promise<GitHubApiResult
 			};
 		}
 
-		const data = await response.json() as GitHubUser;
+		const data: GitHubUser = await response.json();
 
 		return {
 			success: true,
@@ -76,9 +76,10 @@ export async function fetchGitHubUser(username: string): Promise<GitHubApiResult
 			},
 		};
 	} catch (error) {
+		const message = error instanceof Error ? error.message : "Failed to fetch GitHub user data";
 		return {
 			success: false,
-			error: "Failed to fetch GitHub user data",
+			error: message,
 			status: 500,
 		};
 	}
