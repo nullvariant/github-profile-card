@@ -51,8 +51,8 @@ app.get("/", (c) => {
 // Parse size override from query parameter (returns undefined if invalid)
 function parseSizeOverride(value: string | undefined): number | undefined {
 	if (!value) return undefined;
-	const num = parseFloat(value);
-	if (isNaN(num) || num < 0.3 || num > 2.0) return undefined;
+	const num = Number.parseFloat(value);
+	if (Number.isNaN(num) || num < 0.3 || num > 2) return undefined;
 	return num;
 }
 

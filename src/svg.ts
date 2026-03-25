@@ -72,13 +72,13 @@ export const FONTS: Record<string, FontConfig> = {
 		name: "Silkscreen",
 		base64: SILKSCREEN_BASE64,
 		sizes: {
-			title: 1.0,
-			level: 1.0,
-			username: 1.0,
-			bio: 1.0,
-			statLabel: 1.0,
-			statValue: 1.0,
-			barLabel: 1.0,
+			title: 1,
+			level: 1,
+			username: 1,
+			bio: 1,
+			statLabel: 1,
+			statValue: 1,
+			barLabel: 1,
 		},
 		letterSpacing: 0,
 		isPixelFont: true,
@@ -96,11 +96,11 @@ export const DEFAULT_FONT = "press-start-2p";
  */
 export function escapeXml(text: string): string {
 	return text
-		.replace(/&/g, "&amp;")
-		.replace(/</g, "&lt;")
-		.replace(/>/g, "&gt;")
-		.replace(/"/g, "&quot;")
-		.replace(/'/g, "&#39;");
+		.replaceAll("&", "&amp;")
+		.replaceAll("<", "&lt;")
+		.replaceAll(">", "&gt;")
+		.replaceAll('"', "&quot;")
+		.replaceAll("'", "&#39;");
 }
 
 /**
@@ -117,8 +117,8 @@ export function truncateText(text: string, maxLength: number): string {
  * Format number with K/M suffix for large numbers
  */
 export function formatNumber(num: number): string {
-	if (num >= 1000000) {
-		return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+	if (num >= 1_000_000) {
+		return (num / 1_000_000).toFixed(1).replace(/\.0$/, "") + "M";
 	}
 	if (num >= 1000) {
 		return (num / 1000).toFixed(1).replace(/\.0$/, "") + "K";
