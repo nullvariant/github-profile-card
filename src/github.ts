@@ -7,7 +7,6 @@ const GITHUB_API_BASE = "https://api.github.com";
  * - 1-39 characters
  * - Alphanumeric and hyphens only
  * - Cannot start or end with hyphen
- * - No consecutive hyphens
  */
 export const GITHUB_USERNAME_REGEX = /^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,37}[a-zA-Z0-9])?$|^[a-zA-Z0-9]$/;
 
