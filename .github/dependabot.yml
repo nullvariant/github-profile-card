@@ -1,0 +1,56 @@
+version: 2
+updates:
+  # GitHub Actions - keep SHA-pinned actions up to date
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    open-pull-requests-limit: 5
+    rebase-strategy: "auto"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+      - "npm"
+    open-pull-requests-limit: 5
+    rebase-strategy: "auto"
+    groups:
+      dev-dependencies:
+        patterns:
+          - "@cloudflare/*"
+          - "typescript"
+          - "eslint*"
+          - "@typescript-eslint/*"
+          - "@eslint/*"
+          - "vitest"
+          - "@vitest/*"
+          - "wrangler"
+        update-types:
+          - "minor"
+          - "patch"
+      production-dependencies:
+        patterns:
+          - "hono"
+        update-types:
+          - "minor"
+          - "patch"
