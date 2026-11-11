@@ -10,7 +10,7 @@ importers:
     dependencies:
       hono:
         specifier: ^4.12.18
-        version: 4.12.33
+        version: 4.13.18
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20251225.0
@@ -1100,8 +1100,8 @@ packages:
     resolution: {integrity: sha512-iZyKG96/JwPz1N55vj2Ie2vXbhu440zfUfJvSwEqEbeLluk7NnapfGqa7LH0mOsnDxTF85Mx8/dyR6HfqcbmbQ==}
     engines: {node: '>=20'}
 
-  hono@4.12.33:
-    resolution: {integrity: sha512-+SwvkaiJtxsiPjhy9LivY/1m7UsNqCJetM1BrZl9A5DkQhlbHQDU730mMiDPWjnoCYOM8Chf3WrCJw27kNTPFQ==}
+  hono@4.13.18:
+    resolution: {integrity: sha512-H9q/E1XizaWstJxUW881dmLxEj+t/TrGGnyxINkm4+sK0qUwsMtFdo2BWI9Vs3cIS19MU6b6iCijoUoEf4f3DA==}
     engines: {node: '>=16.9.0'}
 
   hookified@1.15.1:
@@ -2615,7 +2615,7 @@ snapshots:
     dependencies:
       hookified: 1.15.1
 
-  hono@4.12.33: {}
+  hono@4.13.18: {}
 
   hookified@1.15.1: {}
 
