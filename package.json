@@ -1,6 +1,7 @@
 {
   "name": "github-profile-card-worker",
   "version": "1.0.0",
+  "packageManager": "pnpm@11.1.2",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
